@@ -1,0 +1,85 @@
+{
+  "kind": "collectionType",
+  "collectionName": "products",
+  "info": {
+    "singularName": "product",
+    "pluralName": "products",
+    "displayName": "Product"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "nombre": {
+      "type": "string",
+      "unique": true
+    },
+    "slug": {
+      "type": "uid"
+    },
+    "images": {
+      "type": "media",
+      "multiple": true,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "sku": {
+      "type": "string",
+      "unique": true
+    },
+    "descripcion": {
+      "type": "blocks"
+    },
+    "marca": {
+      "type": "string"
+    },
+    "capacidad": {
+      "type": "string"
+    },
+    "subfamilia": {
+      "type": "string"
+    },
+    "tecnicaImpresion": {
+      "type": "string"
+    },
+    "areaImpresion": {
+      "type": "string"
+    },
+    "familia": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::familia.familia",
+      "inversedBy": "products"
+    },
+    "isFeatured": {
+      "type": "boolean",
+      "default": true
+    },
+    "TipoDePersonalizacion": {
+      "type": "enumeration",
+      "enum": [
+        "Grabado Laser",
+        "DTF UV",
+        "Bordado",
+        "Vinil"
+      ]
+    },
+    "price": {
+      "type": "decimal"
+    },
+    "material": {
+      "type": "string"
+    },
+    "tecnicas": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::tecnica-de-personalizacion.tecnica-de-personalizacion",
+      "inversedBy": "products"
+    }
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "kind": "collectionType",
+  "collectionName": "tecnica_de_personalizacions",
+  "info": {
+    "singularName": "tecnica-de-personalizacion",
+    "pluralName": "tecnica-de-personalizacions",
+    "displayName": "tecnicas"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Nombre": {
+      "type": "string"
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "Nombre"
+    },
+    "active": {
+      "type": "boolean"
+    },
+    "products": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::product.product",
+      "mappedBy": "tecnicas"
+    }
+  }
+}

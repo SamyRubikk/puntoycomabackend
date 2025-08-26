@@ -1,0 +1,53 @@
+{
+  "kind": "collectionType",
+  "collectionName": "familias",
+  "info": {
+    "singularName": "familia",
+    "pluralName": "familias",
+    "displayName": "familias"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Nombre": {
+      "type": "string"
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "Nombre"
+    },
+    "ProveedorID": {
+      "type": "string"
+    },
+    "products": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::product.product",
+      "mappedBy": "familia"
+    },
+    "Descripcion": {
+      "type": "text"
+    },
+    "iconKey": {
+      "type": "string"
+    },
+    "orden": {
+      "type": "integer"
+    },
+    "visisbleEnMenu": {
+      "type": "boolean"
+    },
+    "image": {
+      "type": "media",
+      "multiple": true,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    }
+  }
+}
