@@ -80,6 +80,15 @@
       "relation": "manyToMany",
       "target": "api::tecnica-de-personalizacion.tecnica-de-personalizacion",
       "inversedBy": "products"
+    },
+    "externalImages": {
+      "type": "json"
+    },
+    "baseCost": {
+      "type": "decimal"
+    },
+    "checkSum": {
+      "type": "string"
     }
   }
 }

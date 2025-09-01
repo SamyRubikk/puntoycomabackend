@@ -521,11 +521,14 @@ export interface ApiProductProduct extends Struct.CollectionTypeSchema {
   };
   attributes: {
     areaImpresion: Schema.Attribute.String;
+    baseCost: Schema.Attribute.Decimal;
     capacidad: Schema.Attribute.String;
+    checkSum: Schema.Attribute.String;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
     descripcion: Schema.Attribute.Blocks;
+    externalImages: Schema.Attribute.JSON;
     familia: Schema.Attribute.Relation<'manyToOne', 'api::familia.familia'>;
     images: Schema.Attribute.Media<
       'images' | 'files' | 'videos' | 'audios',
