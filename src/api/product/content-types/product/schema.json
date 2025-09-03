@@ -58,7 +58,7 @@
     },
     "isFeatured": {
       "type": "boolean",
-      "default": true
+      "default": false
     },
     "TipoDePersonalizacion": {
       "type": "enumeration",
