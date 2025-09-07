@@ -543,7 +543,7 @@ export interface ApiProductProduct extends Struct.CollectionTypeSchema {
       Schema.Attribute.Private;
     marca: Schema.Attribute.String;
     material: Schema.Attribute.String;
-    nombre: Schema.Attribute.String & Schema.Attribute.Unique;
+    nombre: Schema.Attribute.String;
     price: Schema.Attribute.Decimal;
     publishedAt: Schema.Attribute.DateTime;
     sku: Schema.Attribute.String & Schema.Attribute.Unique;
